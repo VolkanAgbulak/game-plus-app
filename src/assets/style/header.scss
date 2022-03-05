@@ -1,0 +1,51 @@
+.header{
+    padding: 14px 0 ;
+    background-color: $white-color;
+    width: 100%;
+    display: flex;
+    .logo {
+        float: left;
+    }
+    .header-right {
+        float: right;
+        .lest-play{
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.57px;
+            text-align: center;
+            background-color: $green-color;
+            color: $white-color;
+            padding: 11px 44px;
+            margin: 7px 0px 0px;
+            display: flex;
+        }
+    }
+}
+
+.header-menu {
+    float: left;
+    margin-right: 20px;
+    li{
+        float: left;
+        padding: 17px 20px;
+        a {
+            font-family: GreycliffCF;
+            font-size: 16px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.57px;
+            color: $black-color;
+        }
+        &.active{
+            a{
+
+                color:$green-color;
+            }
+        }
+    }
+}

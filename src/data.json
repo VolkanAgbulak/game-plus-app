@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Hello World",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis eros quis turpis suscipit fringilla. Donec congue lacus nisi, quis vulputate ante eleifend nec. Ut euismod non sem sodales euismod. Integer semper gravida mauris, a elementum urna fermentum nec. Fusce enim urna, viverra eu tincidunt non, vestibulum ac dui. Proin commodo lacinia lacus id scelerisque. Vivamus ipsum odio, consectetur vel velit eu, pellentesque rhoncus justo. Sed bibendum gravida justo. Maecenas venenatis risus tortor, id pretium est rhoncus at. Etiam sodales ante ex.",
+        "genre": [
+          "Shooters",
+          "Action",
+          "RPG",
+          "Racing",
+          "MOBA/MMO",
+          "Simulation",
+          "Strategy",
+          "Sports",
+          "Kids/Family",
+          "Casual",
+          "Demo",
+          "Horror",
+          "Platformer",
+          "Battle Royale",
+          "Adventure",
+          "Open World"
+        ],  
+        "state": [
+            "Available",
+            "Patching",
+            "Maintenance"
+        ]
+      }
+]

@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'variable';
+@import 'header';
+@import 'banner';
+
+
+.hebe{
+    background-color: $white-color;
+}
+body{
+    background-color: $white-color;
+}
+.container{
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
