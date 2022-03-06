@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "https://cdn.skypack.dev/core-js/actual/array/group-by";
 
 import axios from "axios";
 import "./assets/style/App.scss";
