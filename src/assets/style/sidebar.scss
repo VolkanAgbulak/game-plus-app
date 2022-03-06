@@ -1,0 +1,131 @@
+.sidebar {
+  margin: 0 20px 0 0;
+  padding: 40px 30px 60px;
+  background-color: $dark-grey-color;
+
+}
+.filter-capsule {
+	margin-bottom: 60px;
+	.filter-title {
+		font-size: 24px;
+		font-weight: 600;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: #afafaf;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		li {
+			margin: 10px 0px;
+			.form-control {
+				font-size: 20px;
+				font-weight: normal;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.2;
+				letter-spacing: normal;
+				color: #afafaf;
+				display: flex;
+				input[type="checkbox"] {
+					-webkit-appearance: none;
+					appearance: none;
+					background-color: $white-color;
+					margin: 0;
+					font: inherit;
+					color: #afafaf;
+					width: 24px;
+					height: 24px;
+					border: 1px solid #afafaf;
+					transform: translateY(-0.075px);
+					display: grid;
+					position: relative;
+					justify-content: start;
+					margin-right: 20px;
+					&::before {
+						content: "";
+						width: 14px;
+						height: 14px;
+						clip-path: polygon(
+							14% 44%,
+							0 65%,
+							50% 100%,
+							100% 16%,
+							80% 0%,
+							43% 62%
+						);
+						transform: scale(0);
+						transform-origin: bottom left;
+						transition: 120ms transform ease-in-out;
+						background-color: $white-color;
+						position: absolute;
+						left: 5px;
+						top: 5px;
+					}     
+			
+					&:checked {
+						&::before {
+							transform: scale(1);
+						}
+						&::after {
+							content: "";
+							width: 24px;
+							height: 24px;
+							background-color: $green-color;
+						}
+					}
+				}
+				input[type="radio"] {
+					-webkit-appearance: none;
+					appearance: none;
+					background-color: $white-color;
+					margin: 0;
+					font: inherit;
+					color: #afafaf;
+					width: 24px;
+					height: 24px;
+					border: 1px solid #afafaf;
+					transform: translateY(-0.075px);
+					display: grid;
+					position: relative;
+					justify-content: start;
+					margin-right: 20px;
+					&::before {
+						content: "";
+						width: 14px;
+						height: 14px;
+						clip-path: polygon(
+							14% 44%,
+							0 65%,
+							50% 100%,
+							100% 16%,
+							80% 0%,
+							43% 62%
+						);
+						transform: scale(0);
+						transform-origin: bottom left;
+						transition: 120ms transform ease-in-out;
+						background-color: $white-color;
+						position: absolute;
+						left: 5px;
+						top: 5px;
+					}     
+			
+					&:checked {
+						&::before {
+							transform: scale(1);
+						}
+						&::after {
+							content: "";
+							width: 24px;
+							height: 24px;
+							background-color: $green-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

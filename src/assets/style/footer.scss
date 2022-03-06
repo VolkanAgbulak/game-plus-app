@@ -1,0 +1,107 @@
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+	z-index: 9;
+  .first-line {
+    background: $white-color;
+    padding: 24px 0px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .menu-area {
+      display: flex;
+      justify-content: space-between;
+      ul {
+				cursor: pointer;
+        padding-right: 60px;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: $dark-grey-color;
+      }
+    }
+    h1 {
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      color: $dark-grey-color;
+    }
+		.social-media-area{
+			ul{
+
+				display: flex;
+				margin-top: 16px;
+			}
+			.social-media{
+				display: block;
+				margin-right: 16px;
+				cursor: pointer;
+			}
+			.facebook{  width: 8px;
+				height: 16px;
+        background-image: url("../image/icon-facebook.svg");
+			}
+			.twitter{  width: 20px;
+				height: 16px;
+        background-image: url("../image/icon-twitter.svg");
+			}
+			.instagram{  width: 16px;
+				height: 16px;
+        background-image: url("../image/icon-instagram.svg");
+			}
+			.youtube{  width: 14px;
+				height: 16px;
+        background-image: url("../image/icon-youtube.svg");
+			}
+		}
+    .laguage-area {
+      select {
+        border: 0px;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: $dark-grey-color;
+        margin-top: 16px;
+      }
+    }
+  }
+  .second-line {
+    background: $dark-grey-color;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul {
+			cursor: pointer;
+      display: flex;
+      li {
+        padding: 10px 10px;
+      }
+    }
+    ul,
+    p {
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.83;
+      letter-spacing: normal;
+      text-align: right;
+      color: $white-color;
+    }
+  }
+}

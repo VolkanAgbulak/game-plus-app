@@ -5,6 +5,7 @@ const SidebarComponent = ({
   gameCategoryItem,
   updateList,
   setsearchState,
+  orderType
 }) => {
   const [statusItem, setCheckedStatus] = useState("");
   const [genreItem, setCheckedGenre] = useState(gameCategoryItem);
@@ -45,7 +46,7 @@ const SidebarComponent = ({
         allFilteredResponse.push(filterResponse[index]);
       }
     }
-    updateList(allFilteredResponse);
+    updateList(allFilteredResponse , orderType);
 
     setsearchState(false);
   }
@@ -54,57 +55,65 @@ const SidebarComponent = ({
   }, [statusItem, genreItem]);
 
   return (
-    <div>
+    <>
       <div className="filter-capsule">
         <div className="filter-title">State Filters</div>
         <ul>
           <li>
-            <input
-              type="radio"
-              name="vehicle2"
-              value="AVAILABLE"
-              onChange={(e) => handleState(e)}
-            />
-            <label for="vehicle2">Available</label>
+            <label className="form-control">
+              <input
+                type="radio"
+                name="vehicle2"
+                value="AVAILABLE"
+                onChange={(e) => handleState(e)}
+              />
+              Available
+            </label>
           </li>
           <li>
-            <input
-              type="radio"
-              name="vehicle2"
-              value="PATCHING"
-              onChange={(e) => handleState(e)}
-            />
-            <label for="vehicle2">Patching</label>
+            <label className="form-control">
+              <input
+                type="radio"
+                name="vehicle2"
+                value="PATCHING"
+                onChange={(e) => handleState(e)}
+              />
+              Patching
+            </label>
           </li>
           <li>
-            <input
-              type="radio"
-              name="vehicle2"
-              value="MAINTENANCE"
-              onChange={(e) => handleState(e)}
-            />
-            <label for="vehicle2">Maintenance</label>
+            <label className="form-control">
+              <input
+                type="radio"
+                name="vehicle2"
+                value="MAINTENANCE"
+                onChange={(e) => handleState(e)}
+              />
+              Maintenance
+            </label>
           </li>
         </ul>
       </div>
       <div className="filter-capsule">
         <div className="filter-title">Genre Filters</div>
-        {genreItem.map((item, index) => (
-          <ul>
+        <ul>
+          {genreItem.map((item, index) => (
             <li key={Math.random()}>
-              <input
-                onChange={(e) => handleCheckbox(index, e)}
-                type="checkbox"
-                checked={item.checked}
-                name={item.category}
-                value={item.category}
-              />
-              <label for={item.category}> {item.category}</label>
+              <label className="form-control">
+                <input
+                  onChange={(e) => handleCheckbox(index, e)}
+                  type="checkbox"
+                  checked={item.checked}
+                  name={item.category}
+                  value={item.category}
+                />
+                {item.category}
+              </label>
             </li>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
-    </div>
+    </>
   );
 };
 

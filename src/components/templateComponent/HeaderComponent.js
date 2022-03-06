@@ -1,15 +1,14 @@
 import React from 'react';
 
 const HeaderComponent = (props) => {
-    const {} = props;
 
     return (
         <div className="header">
             <div className="container">
                 <div className="logo">
-                    <img src="./assets/images/logo.png" />
                 </div>
                 <div className="header-right">
+                    <i className="menu-icon"></i>
                     <ul className="header-menu">
                         <li className="active"><a href="Games">Games</a></li>
                         <li><a href="Membership">Membership</a></li>

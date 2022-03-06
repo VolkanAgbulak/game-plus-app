@@ -1,19 +1,64 @@
-@import 'reset';
-@import 'variable';
-@import 'header';
-@import 'banner';
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+@import "reset";
+
+@import "variable";
+@import "header";
+@import "banner";
+@import "sidebar";
+@import "games";
+@import "footer";
+@import "page-header";
+
+@import "responsive";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Source Sans Pro", cursive;
+  background-color: $white-color;
+}
+.container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.page-capsule {
+  padding: 51px 0px;
+  background: $black-color;
+  margin-bottom: 170px;
+}
+
+.row {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  .sidebar {
+    width: 326px;
+    float: left;
+  }
+  .content {
+    width: 794px;
+    float: right;
+  }
+}
 
 
-.hebe{
-    background-color: $white-color;
-}
-body{
-    background-color: $white-color;
-}
-.container{
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .content {
+    width: 100% !important;
+  }
+  .header {
+    z-index: 99;
+    position: fixed;
+  }
+  .page-capsule {
+    margin-bottom: 0px;
+		padding-top: 30px;
+  }
+
 }

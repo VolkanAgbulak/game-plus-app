@@ -1,0 +1,126 @@
+@media only screen and (max-width: 768px) {
+  .header .logo {
+    float: left;
+    width: 204px;
+    height: 34px;
+    background-size: contain;
+    display: block;
+  }
+  .header-menu,
+  .lest-play,
+  .sidebar {
+    display: none;
+  }
+  .banner-area {
+    .banner-capsule {
+      width: 90%;
+    }
+    .search-area .search-input {
+      width: 70%;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .game-list {
+    grid-template-columns: 100%;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    .capsul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .filter-button {
+      padding: 16px 16px 15px;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #afafaf;
+      background-color: $dark-grey-color;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      width: 45%;
+      justify-content: space-between;
+      .filter-icon {
+        width: 18px;
+        height: 20px;
+        background-image: url("../image/filter-icon.svg");
+        display: block;
+        margin-left: 15px;
+        margin-right: 5px;
+      }
+    }
+    .short-list {
+      width: 45%;
+    }
+  }
+
+  .footer {
+    position: relative;
+    .first-line {
+      background: #fff;
+      padding: 24px 0px;
+      .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .menu-area {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        ul {
+          padding-right: 0px;
+        }
+      }
+      .social-media-area {
+        ul {
+          display: flex;
+          margin-top: 16px;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .second-line {
+      background: #1e1e1e;
+      padding: 15px 0px;
+      .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      ul,
+      p {
+        text-align: center;
+      }
+      ul {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        li {
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
+}

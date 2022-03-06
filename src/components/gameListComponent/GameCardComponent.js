@@ -2,21 +2,37 @@ import React, { useEffect, useState } from "react";
 
 import GameCardItemComponent from "./GameCardItemComponent";
 
-const GameCardComponent = ({ gameItems, searchState, searchList }) => {
+const GameCardComponent = ({
+  gameItems,
+  searchState,
+  searchList,
+  orderType,
+}) => {
+  function searchListOrder() {
+    if (!orderType) {
+       searchList.reverse();
+    }
+  }
+  useEffect(() => {
+    searchListOrder();
+  }, [orderType]);
+
   return (
     <div>
       {(() => {
         if (searchState) {
           if (searchList.length > 0) {
             return (
-              <div>
-								<div>{searchList.length } Result</div>
-								
-                {searchList.map((option) => (
-                  <div>
-                    <span key={Math.random()}>{option.title}</span>
-                  </div>
-                ))}
+              <div className="search-result-card">
+                <div className="search-result-header">
+                  <h2>Search Results</h2>
+                  <h4>{searchList.length} Result</h4>
+                </div>
+                <div className="game-list">
+                  {searchList.map((item) => (
+                    <GameCardItemComponent key={Math.random()} item={item} />
+                  ))}
+                </div>
               </div>
             );
           } else {
@@ -28,23 +44,25 @@ const GameCardComponent = ({ gameItems, searchState, searchList }) => {
           }
         } else {
           return (
-            <div>
+            <>
               {gameItems.map((option) => (
-                <div>
-                  <span key={Math.random()}>{option.group}</span>
-                  {option.children.map((item) => (
-                    <div>
-                      <span key={Math.random()}>{item.title}</span>
-                    </div>
-                  ))}
+                <div className="game-group-card">
+                  <div className="group-name">
+                    <span className="group-name-l">{option.group}</span>
+                    <span className="group-name-bg">&#x2B22;</span>
+                  </div>
+                  <div className="game-list">
+                    {option.children.map((item) => (
+                      <GameCardItemComponent item={item} />
+                    ))}
+                  </div>
                 </div>
               ))}
-            </div>
+            </>
           );
         }
       })()}
     </div>
-
   );
 };
 

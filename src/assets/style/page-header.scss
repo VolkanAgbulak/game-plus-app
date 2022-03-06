@@ -1,0 +1,66 @@
+
+.page-header {
+    margin-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $white-color;
+    }
+    .filter-button {
+      display: none;
+    }
+    .short-list {
+      padding: 16px 16px 15px;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #afafaf;
+      background-color: $dark-grey-color;
+      position: relative;
+      cursor: pointer;
+      .order-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .up-arrow {
+          width: 24px;
+          height: 24px;
+          background-image: url("../image/up-arrow.svg");
+          display: block;
+          margin-left: 10px;
+        }
+        .down-arrow {
+          width: 14px;
+          height: 9px;
+          background-image: url("../image/down-arrow.svg");
+          display: block;
+          margin-left: 15px;
+          margin-right: 5px;
+        }
+      }
+      .order-list {
+        position: absolute;
+        margin: 1px 0 0;
+        padding: 16px;
+        box-shadow: 0 4px 12px 0 $black-color;
+        background-color: $dark-grey-color;
+        left: 0px;
+        right: 0px;
+        top: 56px;
+        z-index: 99;
+      }
+      .order-item {
+        margin: 10px 0px;
+      }
+    }
+  }

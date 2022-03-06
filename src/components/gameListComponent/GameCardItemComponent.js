@@ -1,14 +1,9 @@
 import React from 'react';
 
-const GameCardItemComponent = ({gameItems} )=> {
+const GameCardItemComponent = ({item} )=> {
 
     return (
-        <div>
-        {gameItems.map((option) => (
-            <span key={Math.random()}>{option.group}</span>
-           
-        ))}
-        </div>
+            <span className="game-item">{item.title}</span>
     );
 };
 
